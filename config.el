@@ -90,7 +90,7 @@
   ;; 开启拼音搜索功能
   (pyim-isearch-mode 1)
   (setq load-path (cons (file-truename "~/.doom.d/") load-path))
-  (require 'liberime)
+  (require 'liberime-core)
   (liberime-start "/usr/share/rime-data/" (file-truename "~/.doom.d/pyim/rime/"))
   (liberime-select-schema "luna_pinyin_simp")
   (setq pyim-default-scheme 'rime-quanpin)
