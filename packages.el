@@ -57,3 +57,10 @@
 (package! google-c-style)
 (package! dap-mode)
 (package! youdao-dictionary)
+(package! liberime
+  :recipe (:host github :repo "merrickluo/liberime"
+                 :files ("CMakeLists.txt"
+                         "Makefile"
+                         "src"
+                         "liberime-config.el"
+                         "liberime.el")))
