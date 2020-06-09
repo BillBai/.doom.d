@@ -59,8 +59,10 @@
 (package! youdao-dictionary)
 (package! liberime
   :recipe (:host github :repo "merrickluo/liberime"
-                 :files ("CMakeLists.txt"
-                         "Makefile"
-                         "src"
-                         "liberime-config.el"
-                         "liberime.el")))
+           :files ("Makefile"
+                   "src"
+                   "emacs-module"
+                   "tools"
+                   "liberime.el")))
+(package! bazel-mode)
+(package! w3m)

@@ -62,6 +62,10 @@
 (add-to-list 'auto-mode-alist '("\\.gn\\'" . gn-mode))
 (add-to-list 'auto-mode-alist '("\\DEPS\\'" . python-mode))
 
+;; bazel build
+(add-to-list 'auto-mode-alist '("\\.bazel\\'" . bazel-build-mode))
+(add-to-list 'auto-mode-alist '("\\WORKSPACE\\'" . bazel-workspace-mode))
+
 ;;
 ;; auto header
 ;;
@@ -99,7 +103,8 @@
   (global-set-key (kbd "M-j") 'pyim-convert-string-at-point)
   (setq pyim-dcache-auto-update nil)
   (setq default-input-method "pyim")
-  ;; 我使用全拼
+
+  (liberime-select-schema "luna_pinyin_simp")
   (setq pyim-default-scheme 'rime)
   (setq pyim-page-tooltip 'posframe)
 
@@ -123,6 +128,7 @@
 ;; lsp
 ;;
 (after! lsp-mode
+  (setq lsp-prefer-flymake nil)
   (setq lsp-enable-file-watchers nil))
 
 ;;
