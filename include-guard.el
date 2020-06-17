@@ -45,7 +45,7 @@
         (newline)
         (insert "#define " include-guard)
         (newline 4)
-        (insert "#endif // ifndef " include-guard)
+        (insert "#endif  // " include-guard)
         (newline)
         (previous-line 3)
         (set-buffer-modified-p nil)))))
